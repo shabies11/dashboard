@@ -55,6 +55,9 @@ const VerticalMenu = ({ scrollMenu }) => {
         <MenuItem href='/' icon={<i className='ri-home-smile-line' />}>
           Dashboard
         </MenuItem>
+        <MenuItem href='/' icon={<i className='ri-home-smile-line' />}>
+          Place to Visit
+        </MenuItem>
 
         <MenuSection label='Apps & Pages'>
           <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
