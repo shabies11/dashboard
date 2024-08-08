@@ -55,15 +55,23 @@ const VerticalMenu = ({ scrollMenu }) => {
         <MenuItem href='/' icon={<i className='ri-home-smile-line' />}>
           Dashboard
         </MenuItem>
-        <MenuItem href='/' icon={<i className='ri-home-smile-line' />}>
+        <SubMenu label='Posts' icon={<i className='ri-file-copy-line' />}>
+          <MenuItem href={`/all-posts`}>All Post</MenuItem>
+
+          <MenuItem href={`/categories`}>Categories</MenuItem>
+        </SubMenu>
+        <MenuItem href='/place-to-visit' icon={<i className='ri-home-smile-line' />}>
           Place to Visit
         </MenuItem>
+        <MenuItem href='/find-accommodation' icon={<i className='ri-home-smile-line' />}>
+          Find Accommodation
+        </MenuItem>
 
-        <MenuSection label='Apps & Pages'>
+        {/* <MenuSection label='Apps & Pages'>
           <MenuItem href='/account-settings' icon={<i className='ri-user-settings-line' />}>
             Account Settings
           </MenuItem>
-        </MenuSection>
+        </MenuSection> */}
       </Menu>
     </ScrollWrapper>
   )

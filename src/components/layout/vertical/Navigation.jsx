@@ -65,8 +65,9 @@ const Navigation = () => {
     <VerticalNav customStyles={navigationCustomStyles(theme)} className='shadow-lg'>
       {/* Nav Header including Logo & nav toggle icons  */}
       <NavHeader>
-        <Link href='/'>
-          <Logo />
+        <Link href='/' className='font-bold text-[20px] '>
+          {/* <Logo /> */}
+          Splitdyboat
         </Link>
         {isBreakpointReached && <i className='ri-close-line text-xl' onClick={() => toggleVerticalNav(false)} />}
       </NavHeader>
