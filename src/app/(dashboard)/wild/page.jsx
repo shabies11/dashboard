@@ -2,6 +2,7 @@
 import Grid from '@mui/material/Grid'
 
 import FormLayoutsBasic from '@views/form-layouts/FormLayoutsBasic'
+
 // import BannerLayout from '@views/banner-card/BannerLayout'
 import LandscapceCard from '@/@customumer/LandscapceCard'
 import BannerSliderWild from '@/@customumer/wild/BannerSliderWild'

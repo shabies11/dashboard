@@ -1,11 +1,14 @@
 'use client'
 
+import { useState } from 'react'
+
 import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
 import { IoAddCircleSharp } from 'react-icons/io5'
 import Card from '@mui/material/Card'
-import { useState } from 'react'
+
 import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Input } from '@mui/material'
+
 import SlideCard from './SliderCard'
 
 const SliderWithAddButton = () => {
@@ -20,11 +23,13 @@ const SliderWithAddButton = () => {
   const handleUploadFile = () => {
     if (file) {
       const reader = new FileReader()
+
       reader.onload = () => {
         setCards([...cards, reader.result])
         setFile(null)
         setOpenUploadDialog(false)
       }
+      
       reader.readAsDataURL(file)
     }
   }

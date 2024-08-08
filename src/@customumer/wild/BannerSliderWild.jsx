@@ -1,13 +1,14 @@
 // MUI Imports
 import Grid from '@mui/material/Grid'
 
+import Card from '@mui/material/Card'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
+
 import SliderWithAddButtonWild from '@/@customumer/wild/SliderWithAddButtonWild'
 import PotraitCard from '@/@customumer/PotraitCard'
 import LandscapceCard from '@/@customumer/LandscapceCard'
 
-import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 
 const BannerSliderWild = () => (
   <Card className=' p-10'>

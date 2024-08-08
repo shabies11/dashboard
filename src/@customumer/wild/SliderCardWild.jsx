@@ -1,4 +1,7 @@
 'use client'
+import { useState } from 'react'
+
+import { IoEye } from 'react-icons/io5'
 
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
@@ -9,8 +12,6 @@ import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
 import Button from '@mui/material/Button'
 import { MdDeleteForever } from 'react-icons/md'
-import { IoEye } from 'react-icons/io5'
-import { useState } from 'react'
 import CircularProgress from '@mui/material/CircularProgress'
 
 const SlideCardWild = ({ imageUrl, title, description, onDelete }) => {

@@ -1,12 +1,13 @@
 import Grid from '@mui/material/Grid'
+import Card from '@mui/material/Card'
+import Button from '@mui/material/Button'
+import Typography from '@mui/material/Typography'
+
+import LinkCard from '@/@customumer/wild/LinkCard'
 
 import LandscapceCard from '@/@customumer/LandscapceCard'
 import PotraitCard from '@/@customumer/PotraitCard'
 
-import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
-import LinkCard from '@/@customumer/wild/LinkCard'
 
 const BookNow = () => (
   <Card className=' p-10'>
