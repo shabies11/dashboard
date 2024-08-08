@@ -26,7 +26,7 @@ const Experience = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='shadow-lg px-2 py-4 rounded-xs'>
+    <form onSubmit={handleSubmit} className='shadow-lg px-6 py-6 rounded-md'>
       <h2 className='font-bold text-19px my-2'>Experience section:</h2>
       <Grid container spacing={6} className=''>
         <Grid item xs={12} md={3} lg={6}>

@@ -79,7 +79,7 @@ const rows = [
 
 const AllCategories = ({title}) => {
   return (
-    <div className='shadow-lg px-2 py-4 rounded-xs'>
+    <div className='shadow-lg px-6 py-6 rounded-md'>
       <Grid container spacing={6} className=''>
         <Grid item xs={12} md={12}>
           <AddCategory title={title} />

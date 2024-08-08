@@ -82,7 +82,7 @@ const rows = [
 
 const AllPosts = ({ title }) => {
   return (
-    <div className='shadow-lg px-2 py-4 rounded-xs'>
+    <div className='shadow-lg px-6 py-6 rounded-md'>
       <div className='flex items-center justify-end mb-3'>
         <Button href={'/add-post'} fullWidth variant='outlined' className='w-[120px] float-end'>
           Add New
