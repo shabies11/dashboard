@@ -99,6 +99,7 @@ ul:not([class]) {
   }
 }
 
+
 :where([class^='ri-']) {
   font-size: 1.5rem;
 }
