@@ -6,7 +6,7 @@
  * Export this file and import it in the `@components/theme/index.tsx` file to use the merged theme.
  */
 // MUI Imports
-import { deepmerge } from '@mui/utils'
+// import { deepmerge } from '@mui/utils'
 
 // Core Theme Imports
 import coreTheme from '@core/theme'
