@@ -1,11 +1,14 @@
 'use client'
+import { useState } from 'react'
 
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, Input } from '@mui/material'
+
+import Card from '@mui/material/Card'
 import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
+
 import { IoAddCircleSharp } from 'react-icons/io5'
-import Card from '@mui/material/Card'
-import { useState } from 'react'
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, TextField, Input } from '@mui/material'
+
 import SlideCardWild from './SliderCardWild'
 
 const SliderWithAddButtonWild = () => {
@@ -22,13 +25,16 @@ const SliderWithAddButtonWild = () => {
   const handleUploadFile = () => {
     if (file && title && description) {
       const reader = new FileReader()
+
       reader.onload = () => {
+
         setCards([...cards, { imageUrl: reader.result, title, description }])
         setFile(null)
         setTitle('')
         setDescription('')
         setOpenUploadDialog(false)
       }
+      
       reader.readAsDataURL(file)
     } else {
       alert('Please fill all fields and upload an image')

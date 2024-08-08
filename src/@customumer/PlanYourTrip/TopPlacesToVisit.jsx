@@ -1,12 +1,13 @@
 // MUI Imports
 import Grid from '@mui/material/Grid'
 
-import LandscapceCard from '@/@customumer/LandscapceCard'
-import PotraitCard from '@/@customumer/PotraitCard'
+// import PotraitCard from '@/@customumer/PotraitCard'
 
 import Card from '@mui/material/Card'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+import Typography from '@mui/material/Typography';
+
+import LandscapceCard from '@/@customumer/LandscapceCard'
 
 const TopPlacesToVisit = () => (
   <Card className=' p-10'>

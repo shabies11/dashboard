@@ -1,13 +1,17 @@
 // MUI Imports
 import Grid from '@mui/material/Grid'
 
+import Typography from '@mui/material/Typography'
+
+import Card from '@mui/material/Card'
+import Button from '@mui/material/Button'
+
 import SliderWithAddButton from '@/@customumer/SliderWithAddButton'
 import PotraitCard from '@/@customumer/PotraitCard'
 import LandscapceCard from '@/@customumer/LandscapceCard'
 
-import Card from '@mui/material/Card'
-import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
+
+
 
 const BannerSlider = () => (
   <Card className=' p-10'>
