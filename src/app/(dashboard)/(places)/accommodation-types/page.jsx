@@ -5,7 +5,7 @@ import AllCategories from '@/@newCustom/posts/AllCategories'
 const Page = () => {
   return (
     <>
-      <AllCategories title='Category' />
+      <AllCategories title='Accommodation' />
     </>
   )
 }

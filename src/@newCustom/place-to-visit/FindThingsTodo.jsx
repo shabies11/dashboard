@@ -39,7 +39,7 @@ const FindThingsTodo = () => {
   }
 
   return (
-    <form className='shadow-lg px-2 py-4 rounded-xs'>
+    <form className='shadow-lg px-6 py-6 rounded-md'>
       <h2 className='font-bold text-19px my-2'>Find things to do, Section:</h2>
       <Grid container spacing={6} className=''>
         <Grid item xs={12} md={12}>

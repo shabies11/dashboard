@@ -2,7 +2,8 @@ import { Button, Grid } from '@mui/material'
 
 import Explore from '@/@newCustom/place-to-visit/Explore'
 import Experience from '@/@newCustom/place-to-visit/Experience'
-import FindThingsTodo from '@/@newCustom/place-to-visit/FindThingsTodo'
+import FindThingsTodo from '@/@newCustom/place-to-visit/FindThingsTodo' 
+import GalleryDropzone from '@/@newCustom/commons/GalleryDropzone'
 
 const Page = () => {
   return (
@@ -15,6 +16,9 @@ const Page = () => {
           <Experience />
         </Grid>
         <Grid item xs={12} md={12}>
+          <GalleryDropzone />
+        </Grid>
+        <Grid item xs={12} md={12} className='hidden'>
           <FindThingsTodo />
         </Grid>
       </Grid>

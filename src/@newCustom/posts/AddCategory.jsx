@@ -8,53 +8,26 @@ import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import Button from '@mui/material/Button'
-import Typography from '@mui/material/Typography'
 import TextField from '@mui/material/TextField'
-import FormControl from '@mui/material/FormControl'
-import InputLabel from '@mui/material/InputLabel'
-import Select from '@mui/material/Select'
-import MenuItem from '@mui/material/MenuItem'
-import Chip from '@mui/material/Chip'
 
 // Vars
 const initialData = {
   postTitle: 'Nature'
 }
 
-const AddCategory = () => {
+const AddCategory = ({ title }) => {
   // States
   const [formData, setFormData] = useState(initialData)
-  const [fileInput, setFileInput] = useState('')
-  const [imgSrc, setImgSrc] = useState('/images/avatars/1.png')
 
   const handleFormChange = (field, value) => {
     setFormData({ ...formData, [field]: value })
-  }
-
-  const handleFileInputChange = file => {
-    const reader = new FileReader()
-    const { files } = file.target
-
-    if (files && files.length !== 0) {
-      reader.onload = () => setImgSrc(reader.result)
-      reader.readAsDataURL(files[0])
-
-      if (reader.result !== null) {
-        setFileInput(reader.result)
-      }
-    }
-  }
-
-  const handleFileInputReset = () => {
-    setFileInput('')
-    setImgSrc('/images/avatars/1.png')
   }
 
   return (
     <Card>
       <CardContent className='mbe-2'>
         <div className='flex max-sm:flex-col items-center gap-6'>
-          <h2>Add Categroy:</h2>
+          <h2>Add {title}:</h2>
         </div>
       </CardContent>
       <CardContent>
@@ -63,8 +36,8 @@ const AddCategory = () => {
             <Grid item xs={12} sm={12}>
               <TextField
                 fullWidth
-                label='Category Name'
-                placeholder='Insert Category'
+                label={`${title} Name`}
+                placeholder={`Insert ${title}`}
                 onChange={e => handleFormChange('category', e.target.value)}
               />
             </Grid>

@@ -1,5 +1,6 @@
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
+import NextTopLoader from 'nextjs-toploader'
 import { ItineraryProvider } from '@/@customumer/Itinearary/ItineraryContext'
 
 // Style Imports
@@ -21,7 +22,18 @@ const RootLayout = ({ children }) => {
   return (
     <html id='__next' dir={direction}>
       <body className='flex is-full min-bs-full flex-auto flex-col'>
-        <ItineraryProvider>{children}</ItineraryProvider>
+        <NextTopLoader
+          color='#2299DD'
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={false}
+          easing='ease'
+          speed={200}
+          shadow='0 0 10px #2299DD,0 0 5px #2299DD'
+        />
+        {children}
       </body>
     </html>
   )
