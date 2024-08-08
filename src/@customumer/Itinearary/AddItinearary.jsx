@@ -14,11 +14,6 @@ import ListItem from '@mui/material/ListItem'
 import ListItemText from '@mui/material/ListItemText'
 import IconButton from '@mui/material/IconButton'
 import DeleteIcon from '@mui/icons-material/Delete'
-import SliderWithAddButton from '@/@customumer/SliderWithAddButton'
-
-const cardStyles = {
-  shadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)',
-  marginBottom: '20px'
 import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
@@ -28,16 +23,9 @@ import Chip from '@mui/material/Chip'
 
 import SliderWithAddButton from '@/@customumer/SliderWithAddButton'
 
-// Vars
-const initialData = {
-  postTitle: 'Price and Packages',
-  prices: [],
-  ageRestrictions: [],
-  termsConditions: [],
-  cancellationPolicies: [],
-  cardLabel: '',
-  review: '',
-  postDesc: ''
+const cardStyles = {
+  shadow: '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)',
+  marginBottom: '20px'
 }
 
 const initialData = {
