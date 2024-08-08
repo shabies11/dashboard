@@ -1,7 +1,5 @@
 import { Button, Grid } from '@mui/material'
-
-import Explore from '@/@newCustom/place-to-visit/Explore'
-import Experience from '@/@newCustom/place-to-visit/Experience'
+ 
 import FindThingsTodo from '@/@newCustom/place-to-visit/FindThingsTodo'
 import TopPlacesToVisit from '@/@newCustom/find-accommodation/TopPlacesToVisit'
 import ThingsToDoHK from '@/@newCustom/find-accommodation/ThingsToDoHK'

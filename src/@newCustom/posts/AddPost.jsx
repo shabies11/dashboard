@@ -14,14 +14,13 @@ import FormControl from '@mui/material/FormControl'
 import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
-import Chip from '@mui/material/Chip'
 
 // Vars
 const initialData = {
   postTitle: 'Nature'
 }
 
-const AddPost = () => {
+const AddPost = ({title}) => {
   // States
   const [formData, setFormData] = useState(initialData)
   const [fileInput, setFileInput] = useState('')
@@ -111,14 +110,7 @@ const AddPost = () => {
                 onChange={e => handleFormChange('cardLabel', e.target.value)}
               />
             </Grid>
-            <Grid item xs={12} sm={12}>
-              <TextField
-                fullWidth
-                label='Review'
-                placeholder='Enter Number of Stars'
-                onChange={e => handleFormChange('review', e.target.value)}
-              />
-            </Grid>
+
             <Grid item xs={12} sm={12}>
               <TextField
                 fullWidth

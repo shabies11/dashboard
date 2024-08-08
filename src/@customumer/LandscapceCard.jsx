@@ -24,10 +24,9 @@ const LandscapceCard = () => {
   }
 
   const handleFileInputChange = event => {
-    const file = event.target.files[0];
-    
-    if (file) {
+    const file = event.target.files[0]
 
+    if (file) {
       const reader = new FileReader()
 
       reader.onload = () => setImgSrc(reader.result)
@@ -44,12 +43,12 @@ const LandscapceCard = () => {
 
   return (
     <Card sx={{ padding: '7px' }}>
-      <CardContent className='mbe-5 w-full'>
+      <CardContent className='mb-2 w-full'>
         <div className='relative'>
           <img
             src={imgSrc}
             alt='Profile'
-            style={{ height: '365px', objectFit: 'cover', cursor: 'pointer' }}
+            style={{ height: '200px', objectFit: 'cover', cursor: 'pointer' }}
             className='rounded w-full'
             onClick={handleFileInputClick} // Clicking on the image triggers file input
           />
@@ -63,16 +62,14 @@ const LandscapceCard = () => {
         </div>
       </CardContent>
       <CardContent>
-        <form onSubmit={e => e.preventDefault()}>
-          <TextField
-            fullWidth
-            label='Tittle'
-            value={formData.state}
-            placeholder='Enter tittle of Image'
-            onChange={e => handleFormChange('state', e.target.value)}
-            style={{ marginBottom: '16px' }}
-          />
-        </form>
+        <TextField
+          fullWidth
+          label='Title'
+          value={formData.state}
+          placeholder='Enter title of Image'
+          onChange={e => handleFormChange('state', e.target.value)}
+          style={{ marginBottom: '16px' }}
+        />
       </CardContent>
     </Card>
   )

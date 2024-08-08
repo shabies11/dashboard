@@ -80,11 +80,10 @@ const rows = [
   )
 ]
 
-const AllPosts = () => {
+const AllPosts = ({ title }) => {
   return (
     <div className='shadow-lg px-2 py-4 rounded-xs'>
-      <div className='flex items-center justify-between mb-3'>
-        <h2 className='font-bold text-19px my-2'>All Posts:</h2>
+      <div className='flex items-center justify-end mb-3'>
         <Button href={'/add-post'} fullWidth variant='outlined' className='w-[120px] float-end'>
           Add New
         </Button>
@@ -95,7 +94,7 @@ const AllPosts = () => {
             <Table sx={{ minWidth: 650 }} aria-label='simple table'>
               <TableHead>
                 <TableRow className=''>
-                  <TableCell className='font-bold uppercase text-[18px]'>Posts</TableCell>
+                  <TableCell className='font-bold uppercase text-[18px]'>{title}</TableCell>
                   <TableCell align='right' className='font-bold uppercase text-[18px]'>
                     Action
                   </TableCell>

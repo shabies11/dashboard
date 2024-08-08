@@ -13,6 +13,8 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 
+import AddCategory from './AddCategory'
+
 function createData(category, actions) {
   return { category, actions }
 }
@@ -75,22 +77,19 @@ const rows = [
   )
 ]
 
-const AllCategories = () => {
+const AllCategories = ({title}) => {
   return (
     <div className='shadow-lg px-2 py-4 rounded-xs'>
-      <div className='flex items-center justify-between mb-3'>
-        <h2 className='font-bold text-19px my-2'>AllCategories:</h2>
-        <Button href={'/add-category'} fullWidth variant='outlined' className='w-[120px] float-end'>
-          Add New
-        </Button>
-      </div>
       <Grid container spacing={6} className=''>
+        <Grid item xs={12} md={12}>
+          <AddCategory title={title} />
+        </Grid>
         <Grid item xs={12} md={12}>
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label='simple table'>
               <TableHead>
                 <TableRow className=''>
-                  <TableCell className='font-bold uppercase text-[18px]'>Categories</TableCell>
+                  <TableCell className='font-bold uppercase text-[18px]'>{title}</TableCell>
                   <TableCell align='right' className='font-bold uppercase text-[18px]'>
                     Actions
                   </TableCell>

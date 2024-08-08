@@ -14,7 +14,7 @@ const Page = () => {
         <Grid item xs={12} md={12}>
           <Experience />
         </Grid>
-        <Grid item xs={12} md={12}>
+        <Grid item xs={12} md={12} className='hidden'>
           <FindThingsTodo />
         </Grid>
       </Grid>

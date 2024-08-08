@@ -4,15 +4,10 @@ import { useState } from 'react'
 import { Button, Grid } from '@mui/material'
 
 import ImageTitle from '../commons/ImageTitle'
+import LandscapceCard from '@/@customumer/LandscapceCard'
 
 const TopPlacesToVisit = () => {
-  const [cards, setCards] = useState([
-    { title: 'First Card', imgSrc: '/images/avatars/1.png', fileInput: '' },
-    { title: 'Second Card', imgSrc: '/images/avatars/1.png', fileInput: '' },
-    { title: 'Third Card', imgSrc: '/images/avatars/1.png', fileInput: '' },
-    { title: 'Fourth Card', imgSrc: '/images/avatars/1.png', fileInput: '' },
-    { title: 'Fifth Card', imgSrc: '/images/avatars/1.png', fileInput: '' }
-  ])
+ 
 
   const handleCardChange = (index, updatedCard) => {
     const updatedCards = cards.map((card, i) => (i === index ? updatedCard : card))
@@ -37,16 +32,21 @@ const TopPlacesToVisit = () => {
     <form onSubmit={handleSubmit} className='shadow-lg px-2 py-4 rounded-xs'>
       <h2 className='font-bold text-19px my-2'>Top places to visit, section:</h2>
       <Grid container spacing={6} className=''>
-        {cards.map((card, index) => (
-          <Grid item xs={12} md={3} lg={index==0 || index>2?6:3} key={index}>
-            <ImageTitle
-              title={card.title}
-              imgSrc={card.imgSrc}
-              fileInput={card.fileInput}
-              onChange={updatedCard => handleCardChange(index, updatedCard)}
-            />
-          </Grid>
-        ))}
+        <Grid item xs={12} md={3} lg={6}>
+        <LandscapceCard />
+         </Grid>
+        <Grid item xs={12} md={3} lg={3}>
+        <LandscapceCard />
+         </Grid>
+        <Grid item xs={12} md={3} lg={3}>
+        <LandscapceCard />
+         </Grid>
+        <Grid item xs={12} md={3} lg={6}>
+        <LandscapceCard />
+         </Grid>
+        <Grid item xs={12} md={3} lg={6}>
+        <LandscapceCard />
+         </Grid>
         <Grid item xs={12} md={12}>
           <Button type='submit' fullWidth variant='contained' className='w-[120px] float-end'>
             Save
