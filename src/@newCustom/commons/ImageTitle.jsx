@@ -1,9 +1,10 @@
+'use client'
 import { useState, useEffect } from 'react'
 
 import { Button, Card, CardContent, CardHeader, TextField } from '@mui/material'
 
 const ImageTitle = ({ title, imgSrc: initialImgSrc, fileInput: initialFileInput, onChange }) => {
-  const [imgSrc, setImgSrc] = useState(initialImgSrc || '/images/avatars/1.png')
+  const [imgSrc, setImgSrc] = useState('/images/avatars/1.png' || initialImgSrc)
   const [fileInput, setFileInput] = useState(initialFileInput || '')
 
   useEffect(() => {
