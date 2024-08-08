@@ -1,5 +1,6 @@
 // Third-party Imports
 import 'react-perfect-scrollbar/dist/css/styles.css'
+import { ItineraryProvider } from '@/@customumer/Itinearary/ItineraryContext'
 
 // Style Imports
 import '@/app/globals.css'
@@ -20,7 +21,7 @@ const RootLayout = ({ children }) => {
   return (
     <html id='__next' dir={direction}>
       <body className='flex is-full min-bs-full flex-auto flex-col'>
-        {children}
+        <ItineraryProvider>{children}</ItineraryProvider>
       </body>
     </html>
   )

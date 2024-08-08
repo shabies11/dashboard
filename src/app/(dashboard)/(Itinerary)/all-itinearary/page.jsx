@@ -3,18 +3,10 @@ import { Button, Grid } from '@mui/material'
 import Explore from '@/@newCustom/place-to-visit/Explore'
 import Experience from '@/@newCustom/place-to-visit/Experience'
 import FindThingsTodo from '@/@newCustom/place-to-visit/FindThingsTodo'
-import AddItinearary from '@/@customumer/Itinearary/AddItinearary'
+import AllItinerary from '@/@customumer/Itinearary/AllItinearary'
 
 const Page = () => {
-  return (
-    <>
-      <Grid container spacing={6}>
-        <Grid item xs={12} md={12}>
-          <AddItinearary />
-        </Grid>
-      </Grid>
-    </>
-  )
+  return <AllItinerary />
 }
 
 export default Page
