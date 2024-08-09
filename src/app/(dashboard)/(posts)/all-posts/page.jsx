@@ -2,7 +2,7 @@ import { Button, Grid } from '@mui/material'
 
 import Explore from '@/@newCustom/place-to-visit/Explore'
 import Experience from '@/@newCustom/place-to-visit/Experience'
-import FindThingsTodo from '@/@newCustom/place-to-visit/FindThingsTodo'
+
 import AllPosts from '@/@newCustom/posts/AllPosts'
 
 const Page = () => {
