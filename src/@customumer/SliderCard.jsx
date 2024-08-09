@@ -2,9 +2,9 @@
 
 import Card from '@mui/material/Card'
 import { IconButton } from '@mui/material'
-import { Trash2 } from 'lucide-react'
+import { Trash2, Eye } from 'lucide-react'
 
-const SlideCard = ({ imageUrl, onDelete }) => {
+const SlideCard = ({ imageUrl, onDelete, onPreview }) => {
   return (
     <Card
       sx={{
@@ -28,10 +28,23 @@ const SlideCard = ({ imageUrl, onDelete }) => {
           position: 'absolute',
           top: '10px',
           right: '10px',
-          backgroundColor: 'rgba(255,255,255,0.7)'
+          backgroundColor: 'rgba(255,255,255,0.7)',
+          zIndex: 1
         }}
       >
         <Trash2 size={20} />
+      </IconButton>
+      <IconButton
+        onClick={onPreview}
+        sx={{
+          position: 'absolute',
+          top: '10px',
+          left: '10px',
+          backgroundColor: 'rgba(255,255,255,0.7)',
+          zIndex: 1
+        }}
+      >
+        <Eye size={20} />
       </IconButton>
     </Card>
   )

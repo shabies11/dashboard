@@ -5,11 +5,10 @@ import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
 import { IconButton, Dialog, DialogTitle, DialogContent, DialogActions, Button, Input } from '@mui/material'
 import { IoAddCircleSharp } from 'react-icons/io5'
-import { MdDeleteForever } from 'react-icons/md'
-import { IoEye } from 'react-icons/io5'
-import { useDropzone } from 'react-dropzone'
-import CircularProgress from '@mui/material/CircularProgress'
 import SlideCard from './SliderCard'
+import { useDropzone } from 'react-dropzone'
+
+const cardDimensions = { width: '100%', height: '100%' } // Ensure consistency with the dotted card
 
 const SliderWithAddButton = () => {
   const [cards, setCards] = useState([])
@@ -71,7 +70,11 @@ const SliderWithAddButton = () => {
       <Grid container spacing={3}>
         {cards.map((file, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
-            <SlideCard imageUrl={file.preview} onDelete={() => handleDeleteCard(index)} />
+            <SlideCard
+              imageUrl={file.preview}
+              onDelete={() => handleDeleteCard(index)}
+              onPreview={() => handlePreview(file.preview)}
+            />
           </Grid>
         ))}
         <Grid item xs={12} sm={6} md={4}>
@@ -84,16 +87,13 @@ const SliderWithAddButton = () => {
               borderRadius: '8px',
               boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
               cursor: 'pointer',
-              position: 'relative'
+              position: 'relative',
+              ...cardDimensions
             }}
             {...getRootProps()}
           >
             <input {...getInputProps()} />
-            {isDragActive ? (
-              <p>Drop the files here ...</p>
-            ) : (
-              <p>Drag & drop some files here, or click to select files</p>
-            )}
+            {isDragActive ? <p>Drop the files here ...</p> : <p>Drag & Upload </p>}
             <IoAddCircleSharp style={{ fontSize: '36px', color: '#888' }} />
           </Card>
         </Grid>
@@ -112,7 +112,9 @@ const SliderWithAddButton = () => {
       <Dialog open={openPreviewDialog} onClose={handleClosePreviewDialog}>
         <DialogTitle>Preview</DialogTitle>
         <DialogContent>
-          <img src={previewSrc} alt='Preview' style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
+          {previewSrc && (
+            <img src={previewSrc} alt='Preview' style={{ width: '100%', height: 'auto', objectFit: 'contain' }} />
+          )}
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClosePreviewDialog} color='primary'>
