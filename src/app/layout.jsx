@@ -33,7 +33,7 @@ const RootLayout = ({ children }) => {
           speed={200}
           shadow='0 0 10px #2299DD,0 0 5px #2299DD'
         />
-        {children}
+        <ItineraryProvider>{children}</ItineraryProvider>
       </body>
     </html>
   )

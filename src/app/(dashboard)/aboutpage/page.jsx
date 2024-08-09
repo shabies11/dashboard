@@ -1,4 +1,4 @@
-import AddItinearary from '@/@customumer/About/AboutPage'
+import AboutPage from '@/@customumer/About/AboutPage'
 
 const Page = () => {
   return <AboutPage />
