@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 import { Button, Grid } from '@mui/material'
 
-import ImageTitle from '../commons/ImageTitle'
 import LandscapceCard from '@/@customumer/LandscapceCard'
 
 const Experience = () => {
@@ -29,19 +28,19 @@ const Experience = () => {
     <form onSubmit={handleSubmit} className='shadow-lg px-6 py-6 rounded-md'>
       <h2 className='font-bold text-19px my-2'>Experience section:</h2>
       <Grid container spacing={6} className=''>
-        <Grid item xs={12} md={3} lg={6}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={6}>
           <LandscapceCard />
         </Grid>
-        <Grid item xs={12} md={3} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
           <LandscapceCard />
         </Grid>
-        <Grid item xs={12} md={3} lg={3}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={3}>
           <LandscapceCard />
         </Grid>
-        <Grid item xs={12} md={3} lg={6}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={6}>
           <LandscapceCard />
         </Grid>
-        <Grid item xs={12} md={3} lg={6}>
+        <Grid item xs={12} sm={6} md={4} lg={4} xl={6}>
           <LandscapceCard />
         </Grid>
 

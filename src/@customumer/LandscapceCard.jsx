@@ -14,7 +14,7 @@ import TextField from '@mui/material/TextField'
 const LandscapceCard = () => {
   // States
   const [formData, setFormData] = useState({ state: '' })
-  const [imgSrc, setImgSrc] = useState('/images/avatars/1.png')
+  const [imgSrc, setImgSrc] = useState('/images/avatars/placeholderimage.jpg')
 
   // Ref for file input
   const fileInputRef = useRef(null)
@@ -42,13 +42,13 @@ const LandscapceCard = () => {
   }
 
   return (
-    <Card sx={{ padding: '7px' }}>
-      <CardContent className='mb-2 w-full'>
+    <Card sx={{ padding: '7px' }} className='h-full'>
+      <CardContent className='mb-2 w-full '>
         <div className='relative'>
           <img
             src={imgSrc}
             alt='Profile'
-            style={{ height: '200px', objectFit: 'cover', cursor: 'pointer' }}
+            style={{ height: '250px', objectFit: 'contain', cursor: 'pointer', backgroundColor: '#CCCCCC' }}
             className='rounded w-full'
             onClick={handleFileInputClick} // Clicking on the image triggers file input
           />
